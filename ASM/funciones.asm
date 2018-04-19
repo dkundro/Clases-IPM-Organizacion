@@ -1,4 +1,4 @@
-global suma, resta, iguales, mayor, menor, menorOIguales, sumaNumerosDeAaB, IesimoDibonacci, aMayuscula
+global suma, resta, iguales, mayor, menor, menorOIguales, sumaNumerosDeAaB, IesimoFibonacci, aMayuscula
 
 section .text
 
