@@ -25,6 +25,9 @@ int main() {
    	return 0;
 }
 
+
+//Los ejercicios nuevos son para quienes ya hayan terminado los de la clase anterior. Los que todavia no terminaron los primeros no se preocupen por los segundos
+
 //Para compilar...
 //nasm -f elf64 funciones.asm -o funciones.o
 //gcc -c -m64 guia.c -o guia.o
