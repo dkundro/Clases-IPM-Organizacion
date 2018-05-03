@@ -1,0 +1,55 @@
+Algunos comandos útiles para Linux:
+
+1) pwd 
+Muestra la dirección completa del directorio actual en el cual se esta posicionado.
+
+
+
+2) ls 
+Muestra todos los archivos y directorios en la carpeta actual.
+
+
+
+3) cd
+Cambia el directorio actual por el indicado.
+"cd .." lleva a un directorio superior
+
+
+
+4) mkdir 
+Crea una carpeta.
+Ej: mkdir Politecnico\ modelo
+
+
+
+5) rm
+Elimina un archivo.
+rm -r 
+Elimina un directorio. Ej: rm -r Politecnico\ modelo
+
+
+
+6) cp
+Copia un archivo de un directorio a otro.
+Ej: cp Comandos Comandos2
+
+
+
+7) --help
+En general los comandos tienen un instructivo con sus parametros y funcionalidades, con este comando se pueden ver.
+Ej: 	ls --help
+	cd --help
+	rm --help
+(a veces se puede usar -help pero no siempre)
+
+
+
+8) man
+Nos da la información disponible en el manual sobre cierto comando, syscall, etc.
+Ej:
+	man ls
+
+
+
+9) sudo comando
+Ejecuta comando con privilegios más altos.
