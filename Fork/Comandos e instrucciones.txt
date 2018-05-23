@@ -1,0 +1,33 @@
+fork(): Es una syscall. Cuando se llama a fork, fork crea un nuevo proceso y retorna el id de ese nuevo proceso. 
+
+Como retorna el id del proceso nuevo, suele utilizarse así: process_id = fork().
+El proceso nuevo, es exactamente igual al anterior, excepto en que el valor de process_id en el proceso padre será el process id del proceso hijo y en el proceso hijo el valor será 0. De esta manera podemos diferenciar dentro del código al proceso hijo y al proceso padre como en el siguiente ejemplo: 
+
+int main ()
+{
+	cout<<"Padre "<<getpid()<<endl;
+	int child_pid = fork(); //creo un nuevo proceso identico a mi y guardo su pid
+	if(child_pid==0)//Si soy el proceso hijo
+	{
+		cout<<"hijo "<<getpid()<<endl;
+		return 0;//finalizo el proceso hijo
+	}
+	else//Si soy el proceso padre
+	{
+		cout<<"padre "<<getpid()<<endl;
+		waitpid(child_pid, NULL,WNOHANG);
+	}
+	return 0;
+}
+
+
+waitpid(child_pid, NULL,WNOHANG) es otra syscall. Esta deja bloqueado a un proceso esperando a que termine el proceso correspondiente a child_pid. Es decir, el proceso que la utiliza no sigue ejecutando hasta que child_pid haya finalizado. 
+En el ejemplo anterior, el proceso padre no finalizará hasta que el proceso hijo no haya finalizado.
+
+getpid() devuelve el PID del proceso que llama a la funcion.
+
+Para compilar los ejercicios basta con ejecutar este comando en la terminal (parados en el directorio que contiene el código):
+g++ -o nombreEjecutable nombreArchivoCodigo.cpp
+Para ejecutar el codigo basta con ejecutar el siguiente comando (parados en el directorio que contiene el código):
+./nombreEjecutable
+
