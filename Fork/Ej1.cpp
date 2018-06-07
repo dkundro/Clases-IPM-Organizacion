@@ -9,6 +9,7 @@ using namespace std;
 
 int main ()
 {
+	//Consigna: crear tres procesos hijos. Cada proceso hijo debe imprimir su PID y luego finalizar. El proceso padre, luego de crear a sus hijos, imprimira su PID, esperara que sus tres hijos hayan terminado y luego finalizara.
 
 }
 

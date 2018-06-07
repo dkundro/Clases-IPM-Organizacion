@@ -8,14 +8,8 @@ using namespace std;
 
 int main ()
 {
-	//Consigna: El proceso principal crea dos procesos hijos:
-	//	Productor: Este proceso escribira A, B , C o D aleatoriamente en un pipe
-	//		cada 3 segundos (usar spleep(3);). Repetira este comportamiento en 
-	//		un bucle infinito (while(true){})
-	//	Consumidor: Este proceso estara dentro de un bucle infinito chequeando 
-	//		constantemente si el proceso productor escribio algo en el pipe.
-	//		Segun la letra que haya escrito el productor, este proceso imprimira algo 
-	//		por pantalla. Finalmente, Volvera a esperar una letra en el pipe 
+	//Utilizando dos procesos: hacer que un proceso le envie "hola, estoy escribiendo en un pipe" a otro proceso.
+	//El otro proceso deberá leer el mensaje que le enviaron por el pipe e imprimirlo
 
 	return 0;
 }
