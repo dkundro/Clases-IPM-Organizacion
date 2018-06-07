@@ -15,13 +15,13 @@ int main ()
 	else//Si soy el proceso padre
 	{
 		cout<<"padre "<<getpid()<<endl;
-		waitpid(child_pid, NULL,WNOHANG);
+		waitpid(child_pid, NULL, 0);
 	}
 	return 0;
 }
 
 
-waitpid(child_pid, NULL,WNOHANG) es otra syscall. Esta deja bloqueado a un proceso esperando a que termine el proceso correspondiente a child_pid. Es decir, el proceso que la utiliza no sigue ejecutando hasta que child_pid haya finalizado. 
+waitpid(child_pid, NULL, 0) es otra syscall. Esta deja bloqueado a un proceso esperando a que termine el proceso correspondiente a child_pid. Es decir, el proceso que la utiliza no sigue ejecutando hasta que child_pid haya finalizado. 
 En el ejemplo anterior, el proceso padre no finalizará hasta que el proceso hijo no haya finalizado.
 
 getpid() devuelve el PID del proceso que llama a la funcion.
