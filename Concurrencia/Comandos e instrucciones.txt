@@ -1,0 +1,41 @@
+Ejemplo
+El siguiente codigo crea dos threads, de los cuales uno ejecutara la funcion A y el otro la funcion B:
+
+void* A(void *args);
+void* B(void *args);
+
+int main ()
+{
+	pthread_t thread1; //Variable correspondiente al thread 1
+	pthread_t thread2; //Variable correspondiente al thread 2
+
+	bool param;
+
+	pthread_create(&thread1, nullptr, A, &param); //Crea un thread en la variable definida previamente (thread1)
+	pthread_create(&thread2, nullptr, B, &param); //Crea un thread en la variable definida previamente (thread2)
+
+	pthread_join(thread1, NULL); //Esta funcion espera a que termine el thread indicado
+	pthread_join(thread2, NULL);
+
+	return 0;
+}
+
+void* A(void *args)//Codigo que ejecutara el thread1
+{
+	cout<<"A"<<endl;
+}
+
+void* B(void *args)//Codigo que ejecutara el thread2
+{
+	cout<<"B"<<endl;
+}
+
+
+Para compilar: g++ codigo.cpp -std=c++11 -lpthread 
+
+Parametros de las funciones:
+
+pthread_create("puntero a la variable del thread a crear", nullptr, "funcion que ejecutara el thread", "puntero a algun parametro (si no se usa puede ser cualquier variable)");
+
+pthread_join("variable del thread", NULL);
+
