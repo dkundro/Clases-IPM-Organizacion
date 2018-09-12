@@ -21,4 +21,4 @@ int main ()
 
 
 
-//Para compilar: g++ Ej1.cpp -std=c++11 -lpthread 
+//Para compilar: g++ Ej2.cpp -std=c++11 -lpthread 

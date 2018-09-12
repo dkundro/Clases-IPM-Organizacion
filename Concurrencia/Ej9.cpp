@@ -9,7 +9,7 @@
 
 using namespace std;
 
-//CONSIGNA: Escribir un codigo que cree dos threads. Uno de ellos debera imprimir las primeras 10 potencias de 2 y el otro las primeras 10 potencias de 5.
+//CONSIGNA: Escribir un codigo que, utilizando dos threads y un lock, produzca un deadlock.
 
 int main ()
 {
@@ -20,4 +20,4 @@ int main ()
 
 
 
-//Para compilar: g++ Ej2.cpp -std=c++11 -lpthread 
+//Para compilar: g++ Ej9.cpp -std=c++11 -lpthread 

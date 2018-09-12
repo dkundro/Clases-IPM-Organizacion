@@ -1,0 +1,28 @@
+Variables atomicas:
+
+	Agregar: #include <atomic>
+
+	La sintaxis para definir una variable atomica, es la siguiente:
+
+		atomic<tipo> variable;
+	
+	Por ejemplo:
+
+		atomic <int> variable;
+		atomic <bool> variable;
+
+	Algunas operaciones comunes pueden encontrarse en este link:
+		https://es.cppreference.com/w/cpp/atomic/atomic
+
+Mutex:
+
+	Agregar: #include <mutex>
+
+	La sintaxis para definir un lock de tipo mutex es la siguiente:
+
+		mutex unMutex;
+	
+	Por ejemplo de uso:
+
+		unMutex.lock();
+		unMutex.unlock();
